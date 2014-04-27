@@ -1,0 +1,68 @@
+--[[
+  -- bomb_check.lua for  in /home/locque_d//rendu/proj/Bomberman/bomberman-2014-locque_d/lua/script
+  --
+  -- Made by damien locque
+  -- Login   <locque_d@epitech.net>
+  --
+  -- Started on  Fri Jun  3 17:51:17 2011 damien locque
+  -- Last update Fri Jun  3 18:29:18 2011 damien locque
+]]--
+
+function try_put_bomb()
+   for y = 0,bomber:getMapHeight() - 1 do
+      for x = 0,bomber:getMapWidth() - 1 do
+	 if bomber:getDangerous(x, y) == true then
+	    bomber:setTmpDangerous(x, y, true)
+	 else
+	    bomber:setTmpDangerous(x, y, false)
+	 end
+      end
+   end
+   bomber:setTmpDangerous(myx, myy, true)
+
+   for i = 0,bomber:getPuissance() do
+      if bomber:getCollision(myx, myy + i) or bomber:getDestructible(myx, myy + i) then
+	 break
+      end
+      bomber:setTmpDangerous(myx, myy + i, true)
+   end
+
+   for i = 0,bomber:getPuissance() do
+      if bomber:getCollision(myx, myy - i) or bomber:getDestructible(myx, myy - i) then
+	 break
+      end
+      bomber:setTmpDangerous(myx, myy - i, true)
+   end
+
+
+   for i = 0,bomber:getPuissance() do
+      if bomber:getCollision(myx + i, myy) or bomber:getDestructible(myx + i, myy) then
+	 break
+      end
+      bomber:setTmpDangerous(myx + i, myy, true)
+   end
+
+   for i = 0,bomber:getPuissance() do
+      if bomber:getCollision(myx - i, myy) or bomber:getDestructible(myx - i, myy) then
+	 break
+      end
+      bomber:setTmpDangerous(myx - i, myy, true)
+   end
+
+   for y = 0,bomber:getMapHeight() - 1 do
+      for x = 0,bomber:getMapWidth() - 1 do
+	 if bomber:getTmpDangerous(x, y) == true then
+	    io.write("1")
+	 else
+	    io.write("0")
+	 end
+	 io.write(" ")
+      end
+      print("")
+   end
+   print("")
+
+   local tab = fill_tab()
+
+   return (false)
+end

@@ -1,0 +1,562 @@
+<BOMBERMANSAVE>
+<PlayersList>
+<NbPlayers>3</NbPlayers>
+<Player1 ClassType="Bomberman">
+<X>256</X>
+<Y>512</Y>
+<LIFE>3</LIFE>
+<MOVESPEED>0.03</MOVESPEED>
+<SPEED>1</SPEED>
+<PUISS>1</PUISS>
+<SCORE>0</SCORE>
+<MOVE>-2.03582</MOVE>
+<BombsList>
+<NbBombs>1</NbBombs>
+<Bomb1 ClassType="Bombe">
+<PUISS>0</PUISS>
+<TIMER>-1</TIMER>
+<PLANT>0</PLANT>
+<EXPLO>0</EXPLO>
+<defUp ClassType="Fire">
+<ORIGX>0</ORIGX>
+<ORIGY>0</ORIGY>
+<MAXX>0</MAXX>
+<MAXY>0</MAXY>
+<DEFX>0</DEFX>
+<DEFY>-1</DEFY>
+<PUISS>0</PUISS>
+<X>0</X>
+<Y>0</Y>
+</defUp>
+<defDown ClassType="Fire">
+<ORIGX>0</ORIGX>
+<ORIGY>0</ORIGY>
+<MAXX>0</MAXX>
+<MAXY>0</MAXY>
+<DEFX>0</DEFX>
+<DEFY>1</DEFY>
+<PUISS>0</PUISS>
+<X>0</X>
+<Y>0</Y>
+</defDown>
+<defLeft ClassType="Fire">
+<ORIGX>0</ORIGX>
+<ORIGY>0</ORIGY>
+<MAXX>0</MAXX>
+<MAXY>0</MAXY>
+<DEFX>1</DEFX>
+<DEFY>0</DEFY>
+<PUISS>0</PUISS>
+<X>0</X>
+<Y>0</Y>
+</defLeft>
+<defRight ClassType="Fire">
+<ORIGX>0</ORIGX>
+<ORIGY>0</ORIGY>
+<MAXX>0</MAXX>
+<MAXY>0</MAXY>
+<DEFX>-1</DEFX>
+<DEFY>0</DEFY>
+<PUISS>0</PUISS>
+<X>0</X>
+<Y>0</Y>
+</defRight>
+<X>24</X>
+<Y>141000440</Y>
+</Bomb1>
+</BombsList>
+</Player1>
+<Player2 ClassType="IABomberman">
+<X>512</X>
+<Y>1792</Y>
+<LIFE>3</LIFE>
+<MOVESPEED>0.03</MOVESPEED>
+<SPEED>1</SPEED>
+<PUISS>1</PUISS>
+<SCORE>10</SCORE>
+<MOVE>0.03</MOVE>
+<FILE>./lua/script/low.lua</FILE>
+<NEXTMOVE>2</NEXTMOVE>
+<OBJECTIFX>1</OBJECTIFX>
+<OBJECTIFY>2</OBJECTIFY>
+<BombsList>
+<NbBombs>1</NbBombs>
+<Bomb1 ClassType="Bombe">
+<PUISS>1</PUISS>
+<TIMER>0.833375</TIMER>
+<PLANT>1</PLANT>
+<EXPLO>1</EXPLO>
+<defUp ClassType="Fire">
+<ORIGX>1</ORIGX>
+<ORIGY>6</ORIGY>
+<MAXX>1</MAXX>
+<MAXY>5</MAXY>
+<DEFX>0</DEFX>
+<DEFY>-1</DEFY>
+<PUISS>0</PUISS>
+<X>0</X>
+<Y>0</Y>
+</defUp>
+<defDown ClassType="Fire">
+<ORIGX>1</ORIGX>
+<ORIGY>6</ORIGY>
+<MAXX>1</MAXX>
+<MAXY>7</MAXY>
+<DEFX>0</DEFX>
+<DEFY>1</DEFY>
+<PUISS>0</PUISS>
+<X>0</X>
+<Y>0</Y>
+</defDown>
+<defLeft ClassType="Fire">
+<ORIGX>1</ORIGX>
+<ORIGY>6</ORIGY>
+<MAXX>1</MAXX>
+<MAXY>6</MAXY>
+<DEFX>1</DEFX>
+<DEFY>0</DEFY>
+<PUISS>0</PUISS>
+<X>0</X>
+<Y>0</Y>
+</defLeft>
+<defRight ClassType="Fire">
+<ORIGX>1</ORIGX>
+<ORIGY>6</ORIGY>
+<MAXX>1</MAXX>
+<MAXY>6</MAXY>
+<DEFX>-1</DEFX>
+<DEFY>0</DEFY>
+<PUISS>0</PUISS>
+<X>0</X>
+<Y>0</Y>
+</defRight>
+<X>1</X>
+<Y>6</Y>
+</Bomb1>
+</BombsList>
+</Player2>
+<Player3 ClassType="IABomberman">
+<X>1536</X>
+<Y>256</Y>
+<LIFE>3</LIFE>
+<MOVESPEED>0.03</MOVESPEED>
+<SPEED>1</SPEED>
+<PUISS>1</PUISS>
+<SCORE>0</SCORE>
+<MOVE>0.03</MOVE>
+<FILE>./lua/script/low.lua</FILE>
+<NEXTMOVE>3</NEXTMOVE>
+<OBJECTIFX>2</OBJECTIFX>
+<OBJECTIFY>3</OBJECTIFY>
+<BombsList>
+<NbBombs>1</NbBombs>
+<Bomb1 ClassType="Bombe">
+<PUISS>1</PUISS>
+<TIMER>0.3344</TIMER>
+<PLANT>1</PLANT>
+<EXPLO>0</EXPLO>
+<defUp ClassType="Fire">
+<ORIGX>7</ORIGX>
+<ORIGY>2</ORIGY>
+<MAXX>0</MAXX>
+<MAXY>0</MAXY>
+<DEFX>0</DEFX>
+<DEFY>-1</DEFY>
+<PUISS>0</PUISS>
+<X>0</X>
+<Y>0</Y>
+</defUp>
+<defDown ClassType="Fire">
+<ORIGX>7</ORIGX>
+<ORIGY>2</ORIGY>
+<MAXX>0</MAXX>
+<MAXY>0</MAXY>
+<DEFX>0</DEFX>
+<DEFY>1</DEFY>
+<PUISS>0</PUISS>
+<X>0</X>
+<Y>0</Y>
+</defDown>
+<defLeft ClassType="Fire">
+<ORIGX>7</ORIGX>
+<ORIGY>2</ORIGY>
+<MAXX>0</MAXX>
+<MAXY>0</MAXY>
+<DEFX>1</DEFX>
+<DEFY>0</DEFY>
+<PUISS>0</PUISS>
+<X>0</X>
+<Y>0</Y>
+</defLeft>
+<defRight ClassType="Fire">
+<ORIGX>7</ORIGX>
+<ORIGY>2</ORIGY>
+<MAXX>0</MAXX>
+<MAXY>0</MAXY>
+<DEFX>-1</DEFX>
+<DEFY>0</DEFY>
+<PUISS>0</PUISS>
+<X>0</X>
+<Y>0</Y>
+</defRight>
+<X>7</X>
+<Y>2</Y>
+</Bomb1>
+</BombsList>
+</Player3>
+</PlayersList>
+<MAPGEN ClassType="Mapgen">
+<MAP>
+<WIDTH>9</WIDTH>
+<HEIGHT>9</HEIGHT>
+<NBPLAYER>3</NBPLAYER>
+<BlockList>
+<Block1 ClassType="BWall">
+<X>0</X>
+<Y>0</Y>
+</Block1>
+<Block2 ClassType="BWall">
+<X>1</X>
+<Y>0</Y>
+</Block2>
+<Block3 ClassType="BWall">
+<X>2</X>
+<Y>0</Y>
+</Block3>
+<Block4 ClassType="BWall">
+<X>3</X>
+<Y>0</Y>
+</Block4>
+<Block5 ClassType="BWall">
+<X>4</X>
+<Y>0</Y>
+</Block5>
+<Block6 ClassType="BWall">
+<X>5</X>
+<Y>0</Y>
+</Block6>
+<Block7 ClassType="BWall">
+<X>6</X>
+<Y>0</Y>
+</Block7>
+<Block8 ClassType="BWall">
+<X>7</X>
+<Y>0</Y>
+</Block8>
+<Block9 ClassType="BWall">
+<X>8</X>
+<Y>0</Y>
+</Block9>
+<Block10 ClassType="BWall">
+<X>0</X>
+<Y>1</Y>
+</Block10>
+<Block11 ClassType="BVoid">
+<X>0</X>
+<Y>0</Y>
+</Block11>
+<Block12 ClassType="BVoid">
+<X>0</X>
+<Y>0</Y>
+</Block12>
+<Block13 ClassType="Box">
+<X>3</X>
+<Y>1</Y>
+</Block13>
+<Block14 ClassType="Box">
+<X>4</X>
+<Y>1</Y>
+</Block14>
+<Block15 ClassType="Box">
+<X>5</X>
+<Y>1</Y>
+</Block15>
+<Block16 ClassType="BVoid">
+<X>0</X>
+<Y>0</Y>
+</Block16>
+<Block17 ClassType="BVoid">
+<X>0</X>
+<Y>0</Y>
+</Block17>
+<Block18 ClassType="BWall">
+<X>8</X>
+<Y>1</Y>
+</Block18>
+<Block19 ClassType="BWall">
+<X>0</X>
+<Y>2</Y>
+</Block19>
+<Block20 ClassType="BVoid">
+<X>0</X>
+<Y>0</Y>
+</Block20>
+<Block21 ClassType="BWall">
+<X>2</X>
+<Y>2</Y>
+</Block21>
+<Block22 ClassType="Box">
+<X>3</X>
+<Y>2</Y>
+</Block22>
+<Block23 ClassType="BWall">
+<X>4</X>
+<Y>2</Y>
+</Block23>
+<Block24 ClassType="Box">
+<X>5</X>
+<Y>2</Y>
+</Block24>
+<Block25 ClassType="BWall">
+<X>6</X>
+<Y>2</Y>
+</Block25>
+<Block26 ClassType="BVoid">
+<X>0</X>
+<Y>3</Y>
+</Block26>
+<Block27 ClassType="BWall">
+<X>8</X>
+<Y>2</Y>
+</Block27>
+<Block28 ClassType="BWall">
+<X>0</X>
+<Y>3</Y>
+</Block28>
+<Block29 ClassType="Box">
+<X>1</X>
+<Y>3</Y>
+</Block29>
+<Block30 ClassType="Box">
+<X>2</X>
+<Y>3</Y>
+</Block30>
+<Block31 ClassType="Box">
+<X>3</X>
+<Y>3</Y>
+</Block31>
+<Block32 ClassType="Box">
+<X>4</X>
+<Y>3</Y>
+</Block32>
+<Block33 ClassType="Box">
+<X>5</X>
+<Y>3</Y>
+</Block33>
+<Block34 ClassType="Box">
+<X>6</X>
+<Y>3</Y>
+</Block34>
+<Block35 ClassType="Box">
+<X>7</X>
+<Y>3</Y>
+</Block35>
+<Block36 ClassType="BWall">
+<X>8</X>
+<Y>3</Y>
+</Block36>
+<Block37 ClassType="BWall">
+<X>0</X>
+<Y>4</Y>
+</Block37>
+<Block38 ClassType="Box">
+<X>1</X>
+<Y>4</Y>
+</Block38>
+<Block39 ClassType="BWall">
+<X>2</X>
+<Y>4</Y>
+</Block39>
+<Block40 ClassType="Box">
+<X>3</X>
+<Y>4</Y>
+</Block40>
+<Block41 ClassType="BWall">
+<X>4</X>
+<Y>4</Y>
+</Block41>
+<Block42 ClassType="Box">
+<X>5</X>
+<Y>4</Y>
+</Block42>
+<Block43 ClassType="BWall">
+<X>6</X>
+<Y>4</Y>
+</Block43>
+<Block44 ClassType="Box">
+<X>7</X>
+<Y>4</Y>
+</Block44>
+<Block45 ClassType="BWall">
+<X>8</X>
+<Y>4</Y>
+</Block45>
+<Block46 ClassType="BWall">
+<X>0</X>
+<Y>5</Y>
+</Block46>
+<Block47 ClassType="Fire">
+<ORIGX>0</ORIGX>
+<ORIGY>0</ORIGY>
+<MAXX>0</MAXX>
+<MAXY>0</MAXY>
+<DEFX>0</DEFX>
+<DEFY>0</DEFY>
+<PUISS>0</PUISS>
+<X>1</X>
+<Y>5</Y>
+</Block47>
+<Block48 ClassType="Box">
+<X>2</X>
+<Y>5</Y>
+</Block48>
+<Block49 ClassType="Box">
+<X>3</X>
+<Y>5</Y>
+</Block49>
+<Block50 ClassType="Box">
+<X>4</X>
+<Y>5</Y>
+</Block50>
+<Block51 ClassType="Box">
+<X>5</X>
+<Y>5</Y>
+</Block51>
+<Block52 ClassType="Box">
+<X>6</X>
+<Y>5</Y>
+</Block52>
+<Block53 ClassType="Box">
+<X>7</X>
+<Y>5</Y>
+</Block53>
+<Block54 ClassType="BWall">
+<X>8</X>
+<Y>5</Y>
+</Block54>
+<Block55 ClassType="BWall">
+<X>0</X>
+<Y>6</Y>
+</Block55>
+<Block56 ClassType="Fire">
+<ORIGX>0</ORIGX>
+<ORIGY>0</ORIGY>
+<MAXX>0</MAXX>
+<MAXY>0</MAXY>
+<DEFX>0</DEFX>
+<DEFY>0</DEFY>
+<PUISS>0</PUISS>
+<X>1</X>
+<Y>6</Y>
+</Block56>
+<Block57 ClassType="BWall">
+<X>2</X>
+<Y>6</Y>
+</Block57>
+<Block58 ClassType="Box">
+<X>3</X>
+<Y>6</Y>
+</Block58>
+<Block59 ClassType="BWall">
+<X>4</X>
+<Y>6</Y>
+</Block59>
+<Block60 ClassType="Box">
+<X>5</X>
+<Y>6</Y>
+</Block60>
+<Block61 ClassType="BWall">
+<X>6</X>
+<Y>6</Y>
+</Block61>
+<Block62 ClassType="Box">
+<X>7</X>
+<Y>6</Y>
+</Block62>
+<Block63 ClassType="BWall">
+<X>8</X>
+<Y>6</Y>
+</Block63>
+<Block64 ClassType="BWall">
+<X>0</X>
+<Y>7</Y>
+</Block64>
+<Block65 ClassType="Fire">
+<ORIGX>0</ORIGX>
+<ORIGY>0</ORIGY>
+<MAXX>0</MAXX>
+<MAXY>0</MAXY>
+<DEFX>0</DEFX>
+<DEFY>0</DEFY>
+<PUISS>0</PUISS>
+<X>1</X>
+<Y>7</Y>
+</Block65>
+<Block66 ClassType="BVoid">
+<X>0</X>
+<Y>0</Y>
+</Block66>
+<Block67 ClassType="Box">
+<X>3</X>
+<Y>7</Y>
+</Block67>
+<Block68 ClassType="Box">
+<X>4</X>
+<Y>7</Y>
+</Block68>
+<Block69 ClassType="Box">
+<X>5</X>
+<Y>7</Y>
+</Block69>
+<Block70 ClassType="Box">
+<X>6</X>
+<Y>7</Y>
+</Block70>
+<Block71 ClassType="Box">
+<X>7</X>
+<Y>7</Y>
+</Block71>
+<Block72 ClassType="BWall">
+<X>8</X>
+<Y>7</Y>
+</Block72>
+<Block73 ClassType="BWall">
+<X>0</X>
+<Y>8</Y>
+</Block73>
+<Block74 ClassType="BWall">
+<X>1</X>
+<Y>8</Y>
+</Block74>
+<Block75 ClassType="BWall">
+<X>2</X>
+<Y>8</Y>
+</Block75>
+<Block76 ClassType="BWall">
+<X>3</X>
+<Y>8</Y>
+</Block76>
+<Block77 ClassType="BWall">
+<X>4</X>
+<Y>8</Y>
+</Block77>
+<Block78 ClassType="BWall">
+<X>5</X>
+<Y>8</Y>
+</Block78>
+<Block79 ClassType="BWall">
+<X>6</X>
+<Y>8</Y>
+</Block79>
+<Block80 ClassType="BWall">
+<X>7</X>
+<Y>8</Y>
+</Block80>
+<Block81 ClassType="BWall">
+<X>8</X>
+<Y>8</Y>
+</Block81>
+</BlockList>
+</MAP>
+</MAPGEN>
+</BOMBERMANSAVE>

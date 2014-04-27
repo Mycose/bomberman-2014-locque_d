@@ -1,0 +1,177 @@
+//
+// IABomberman.cpp for  in /home/locque_d//rendu/proj/Bomberman/bomberman-2014-locque_d/lua
+//
+// Made by damien locque
+// Login   <locque_d@epitech.net>
+//
+// Started on  Mon May 23 09:39:55 2011 damien locque
+<<<<<<< .mine
+// Last update Fri Jun  3 11:42:47 2011 damien locque
+=======
+// Last update Thu Jun  2 18:24:25 2011 clement morissard
+>>>>>>> .r113
+//
+
+#include <cstdlib>
+#include <iostream>
+#include "IABomberman.hh"
+#include "converter.hpp"
+
+extern "C"
+{
+#include "lua.h"
+#include "lualib.h"
+#include "lauxlib.h"
+}
+
+std::string	IABomberman::Serialize(const std::string& name)
+{
+  CMarkup	xml;
+
+  std::cout << "Save du IA: " << name << std::endl;
+  xml.AddElem(name);
+  xml.SetAttrib("ClassType", "IABomberman");
+  xml.IntoElem();
+  xml.AddElem("X", this->x);
+  xml.AddElem("Y", this->y);
+  xml.AddElem("LIFE", this->life);
+  xml.AddElem("MOVESPEED", Convert<float>::convertToType(this->speed));
+  xml.AddElem("SPEED", this->speed);
+  xml.AddElem("PUISS", this->puiss);
+  xml.AddElem("SCORE", this->score);
+  xml.AddElem("MOVE", Convert<float>::convertToType(this->nextMove));
+  xml.AddElem("FILE", this->_file);
+  xml.AddSubDoc(this->SerializeBombs());
+  xml.OutOfElem();
+  return (xml.GetDoc());
+}
+
+void		IABomberman::Deserialize(const std::string& doc, const std::string& name)
+{
+  std::string	str;
+  CMarkup	xml(doc);
+
+  xml.FindElem(name);
+  xml.IntoElem();
+  xml.FindElem("X");
+  this->x = MCD_STRTOINT(xml.GetData());
+  xml.FindElem("Y");
+  this->y = MCD_STRTOINT(xml.GetData());
+  xml.FindElem("LIFE");
+  this->life = MCD_STRTOINT(xml.GetData());
+  xml.FindElem("MOVESPEED");
+  this->moveSpeed = Convert<float>::convertToType(xml.GetData());
+  xml.FindElem("SPEED");
+  this->speed = MCD_STRTOINT(xml.GetData());
+  xml.FindElem("PUISS");
+  this->puiss = MCD_STRTOINT(xml.GetData());
+  xml.FindElem("SCORE");
+  this->score = MCD_STRTOINT(xml.GetData());
+  xml.FindElem("MOVE");
+  this->nextMove = Convert<float>::convertToType(xml.GetData());
+  xml.FindElem("FILE");
+  this->_file = xml.GetData();
+  xml.FindElem("BombsList");
+  str = xml.GetSubDoc();
+  this->DeserializeBombs(str);
+}
+
+IABomberman::IABomberman(Map& map) : ABomberman(0, 0), _map(map)
+{
+}
+
+IABomberman::IABomberman(int x, int y, Map &map, const std::string &file) :
+  ABomberman(x, y), _map(map), _file(file), _move(-1), _action(-1)
+{
+  std::cout << "New IA [" << x << "," << y << "]" << std::endl;
+  this->_state = lua_open();
+  luaL_openlibs(this->_state);
+  Lunar<IALua>::Register(this->_state);
+  lua_pushlightuserdata(this->_state, (void*)this);
+  lua_setglobal(this->_state, "IA");
+  this->getNewObjective();
+}
+
+IABomberman::~IABomberman()
+{
+}
+
+Map &IABomberman::getMap() const
+{
+  return (this->_map);
+}
+
+#include <iostream>
+int		IABomberman::update(gdl::Input&, Map& map)
+{
+  this->_action = -1;
+  if (luaL_dofile(this->_state, this->_file.c_str()) != 0)
+    {
+      std::cerr << lua_tostring(this->_state, -1) << std::endl;
+    }
+  this->doAction(this->_action, map);
+  /*
+  for(int y = 0 ; y < map.getHeight() ; y++)
+    {
+      for(int x = 0 ; x < map.getWidth() ; x++)
+	{
+	  std::cout << map.getMapTableElement(x, y, DANGEROUS);
+	}
+      std::cout << std::endl;
+    }
+  std::cout << std::endl;
+  */
+  return (this->doMove(this->_move, map));
+}
+
+void IABomberman::setAction(int action)
+{
+  this->_action = action;
+}
+
+void IABomberman::setMove(int move)
+{
+  this->_move = move;
+}
+
+int IABomberman::getObjectiveX() const
+{
+  return (this->_objective.first);
+}
+
+int IABomberman::getObjectiveY() const
+{
+  return (this->_objective.second);
+}
+
+void IABomberman::getNewObjective()
+{
+  int	x = 0;
+  int	y = 0;
+  bool	flag = false;
+  while (!flag)
+    {
+      flag = true;
+      x = (1 + rand() % (this->_map.getWidth() - 1));
+      y = (1 + rand() % (this->_map.getHeight() - 1));
+      if (this->_map.getMapTableElement(x, y, COLLISION))
+	flag = false;
+      if (this->_map.getMapTableElement(x, y, DANGEROUS))
+	flag = false;
+      if (this->_objective.first == x && this->_objective.second == y)
+	flag = false;
+    }
+  this->_objective.first = x;
+  this->_objective.second = y;
+}
+
+void IABomberman::setNewObjective(int x, int y)
+{
+  this->_objective.first = x;
+  this->_objective.second = y;
+}
+
+bool IABomberman::isMiddleCase() const
+{
+  return ((!(this->x % BLOCK_SIZE) && !(this->y % BLOCK_SIZE)));
+}
